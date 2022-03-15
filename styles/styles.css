@@ -6,9 +6,21 @@
   width: var(--offcanvas-width);
   top: var(--topNavbarHeight);
   height: calc(100% - var(--topNavbarHeight));
+  background-color:#fafafa 
 }
 
 
+h1{
+  margin-top: 4rem;
+}
+
+@import url('https://rsms.me/inter/inter.css');
+
+body
+{
+  font-family: 'Inter', sans-serif;
+  
+}
 
 /* Purple	Gray	Green	Red	Yellow	Blue	Colors
  --purple-50: #f3f2ff;	 --gray-50: #fff;	 --green-50: #f6ffed;	--red-50: #fff1f0;	 --yellow-50: #fffbe6;	 --blue-50: #f0f5ff;	--primary-color: #50f;
