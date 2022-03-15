@@ -6,7 +6,7 @@
   width: var(--offcanvas-width);
   top: var(--topNavbarHeight);
   height: calc(100% - var(--topNavbarHeight));
-  background-color:#fafafa 
+  background-color:#fafafa; 
 }
 
 
@@ -19,7 +19,6 @@ h1{
 body
 {
   font-family: 'Inter', sans-serif;
-  
 }
 
 /* Purple	Gray	Green	Red	Yellow	Blue	Colors
