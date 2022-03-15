@@ -7,3 +7,17 @@
   top: var(--topNavbarHeight);
   height: calc(100% - var(--topNavbarHeight));
 }
+
+
+
+/* Purple	Gray	Green	Red	Yellow	Blue	Colors
+ --purple-50: #f3f2ff;	 --gray-50: #fff;	 --green-50: #f6ffed;	--red-50: #fff1f0;	 --yellow-50: #fffbe6;	 --blue-50: #f0f5ff;	--primary-color: #50f;
+ --purple-100: #c8c2ff;	 --gray-100: #fafafa;	 --green-100: #d9f7be;	 --red-100: #ffccc7;	 --yellow-100: #fff1b8;	 --blue-100: #d6e4ff;	 --secondary-color: #fff;
+ --purple-200: #a491ff;	 --gray-200: #f5f5f5;	 --green-200: #b7eb8f;	 --red-200: #ffa39e;	 --yellow-200: #ffe58f;	 --blue-200: #adc6ff;	 --success-color: #52c41a;
+ --purple-300: #8561ff;	 --gray-300: #e8e8e8;	 --green-300: #95de64;	 --red-300: #ff7875;	 --yellow-300: #ffd666;	 --blue-300: #85a5ff;	 --error-color: #f5222d;
+ --purple-400: #6b31ff;	 --gray-400: #d9d9d9;	 --green-400: #73d13d;	 --red-400: #ff4d4f;	 --yellow-400: #ffc53d;	 --blue-400: #597ef7;	 --warning-color: #faad14;
+ --purple-500: #50f;	 --gray-500: #bfbfbf;	 --green-500: #52c41a;	 --red-500: #f5222d;	 --yellow-500: #faad14;	 --blue-500: #2f54eb;	 --main-background: #fafafa;
+ --purple-600: #4100cf;	 --gray-600: #8c8c8c;	 --green-600: #389e0d;	 --red-600: #cf1322;	 --yellow-600: #d48806;	 --blue-600: #1d39c4;	 
+ --purple-700: #30009f;	--gray-700: #595959;	 --green-700: #237804;	 --red-700: #a8071a;	 --yellow-700: #ad6800	 --blue-700: #10239e;	 
+ --purple-800: #210070;	 --gray-800: #262626;	 --green-800: #135200;	 --red-800: #820014;	 --yellow-800: #874d00;	 --blue-800: #061178;	 
+ --purple-900: #130040;	 --gray-900: #000;	 --green-900: #092b00;	 --red-900: #5c0011;	 --yellow-900: #613400	 --blue-900: #030852; */
