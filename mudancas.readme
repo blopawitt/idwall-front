@@ -1,6 +1,13 @@
+*GERAL*
+-> lang
+-> opcoes tag meta
+
+
 - Funcionalidade 1
   menu colapsavel
   nav fixa topo
+  filtro - checkbox  multiplo
+  paginacao
 
 - Funcionalidade 2
   menu colapsavel
