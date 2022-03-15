@@ -1,0 +1,9 @@
+:root {
+  --offcanvas-width: 260px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+  top: var(--topNavbarHeight);
+  height: calc(100% - var(--topNavbarHeight));
+}
