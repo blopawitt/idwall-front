@@ -10,11 +10,11 @@
       integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="styles/styles.css" />
-    <script
-      src="https://kit.fontawesome.com/de846246dd.js"
-      crossorigin="anonymous"
-    ></script>
     <title>Monitor</title>
   </head>
   <body>
@@ -72,13 +72,34 @@
               <li class="sidebar-item nav-item">
                 <a class="sidebar-link nav-link" href="#">Atributos</a>
               </li>
-              <li class="sidebar-item nav-item">
+              <li class="sidebar-item nav-item dropdown">
                 <a
-                  class="sidebar-link nav-link active"
+                  class="sidebar-link nav-link active dropdown-toggle"
                   aria-current="page"
                   href="index.html"
-                  >Monitor</a
+                  id="navbarDropdown"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
+                  Monitor
+                </a>
+                <ul
+                  class="dropdown-monitor dropdown-menu"
+                  aria-labelledby="navbarDropdown"
+                >
+                  <li>
+                    <a class="dropdown-item text-wrap" href="#">Status</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-wrap" href="#">Protocolos</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item text-wrap" href="#"
+                      >Consultas em Análise</a
+                    >
+                  </li>
+                </ul>
               </li>
               <li class="sidebar-item nav-item">
                 <a class="sidebar-link nav-link" href="#">Organizações</a>
@@ -93,6 +114,7 @@
     <main class="main-container min-vh-100">
       <section class="content">
         <header>Monitor</header>
+        <!--Tabs Header-->
         <nav>
           <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
             <button
@@ -105,7 +127,7 @@
               aria-controls="nav-status"
               aria-selected="true"
             >
-              Status
+              Status Servicos
             </button>
             <button
               class="nav-link"
@@ -133,15 +155,18 @@
             </button>
           </div>
         </nav>
+        <!--Tabs Header-->
+        <!--Tabs Content-->
         <div class="tab-content" id="nav-tabContent">
+          <!--Tab1 Content-->
           <div
             class="tab-pane fade show active"
             id="nav-status"
             role="tabpanel"
             aria-labelledby="nav-status-tab"
           >
-            <form>
-              <label class="form-check-label" for="flexCheckChecked"
+            <form class="filtro">
+              <!--<label class="form-check-label" for="flexCheckChecked"
                 >Offline:</label
               >
               <input
@@ -159,7 +184,7 @@
                 type="checkbox"
                 value="online"
                 id="flexCheckChecked"
-              />
+              />-->
               <label for="uf" class="form-label">UF:</label>
               <select
                 id="uf"
@@ -178,35 +203,179 @@
                 <option value="TO">TO</option>
               </select>
             </form>
-            <div>
-              <p>
-                Conteudo filtro -> divido em dois containers (offline e online)
-              </p>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Offline</h5>
+                    <div class="card-text">
+                      <ul class="offline">
+                        <li class="offline-version">V2</li>
+                        <li>
+                          <i class="offline-icon bi bi-circle-fill"></i
+                          >InfracoesPrefeituraSP
+                        </li>
+                        <li>
+                          <i class="offline-icon bi bi-circle-fill"></i
+                          >InfracoesRS
+                        </li>
+                        <li>
+                          <i class="offline-icon bi bi-circle-fill"></i
+                          >JuntaComercialDF
+                        </li>
+                        <li>
+                          <i class="offline-icon bi bi-circle-fill"></i
+                          >MultasPoliciaRodoviariaFederal
+                        </li>
+                        <li>
+                          <i class="offline-icon bi bi-circle-fill"></i
+                          >NovoAntecedentesMT
+                        </li>
+                        <li>
+                          <i class="offline-icon bi bi-circle-fill"></i
+                          >RestituicaoReceitaFederal
+                        </li>
+                        <li>
+                          <i class="offline-icon bi bi-circle-fill"></i>SIAFI
+                        </li>
+                        <li>
+                          <i class="offline-icon bi bi-circle-fill"></i>SSDMEC
+                        </li>
+                        <li>
+                          <i class="offline-icon bi bi-circle-fill"></i
+                          >VeiculoDetranSP
+                        </li>
+                      </ul>
+                    </div>
+                    <nav aria-label="...">
+                      <ul class="pagination pagination-sm justify-content-end">
+                        <li class="page-item disabled">
+                          <span class="page-link">Anterior</span>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <span class="page-link">2</span>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Próximo</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Online</h5>
+                    <div class="card-text">
+                      <ul class="online">
+                        <li>
+                          <i class="online-icon bi bi-circle-fill"></i
+                          >AntecedentesCE
+                        </li>
+                        <li>
+                          <i class="online-icon bi bi-circle-fill"></i
+                          >AntecedenteDF
+                        </li>
+                        <li>
+                          <i class="online-icon bi bi-circle-fill"></i
+                          >AntecedentesMT
+                        </li>
+                        <li>
+                          <i class="online-icon bi bi-circle-fill"></i
+                          >AntecedentesRO
+                        </li>
+                        <li>
+                          <i class="online-icon bi bi-circle-fill"></i
+                          >AntecedentesTO
+                        </li>
+                        <li>
+                          <i class="online-icon bi bi-circle-fill"></i>CADICON
+                        </li>
+                        <li>
+                          <i class="online-icon bi bi-circle-fill"></i
+                          >InfracoesDetranCE
+                        </li>
+                        <li>
+                          <i class="online-icon bi bi-circle-fill"></i
+                          >InfracoesDetranPI
+                        </li>
+                        <li>
+                          <i class="online-icon bi bi-circle-fill"></i
+                          >InfracoesDetranSE
+                        </li>
+                      </ul>
+                    </div>
+                    <nav aria-label="...">
+                      <ul class="pagination pagination-sm justify-content-end">
+                        <li class="page-item disabled">
+                          <span class="page-link">Previous</span>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                          <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                          <span class="page-link">2</span>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                          <a class="page-link" href="#">Next</a>
+                        </li>
+                      </ul>
+                    </nav>
+                  </div>
+                </div>
+              </div>
             </div>
-            <nav aria-label="...">
-              <ul class="pagination justify-content-center">
-                <li class="page-item disabled">
-                  <span class="page-link">Previous</span>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">1</a></li>
-                <li class="page-item active" aria-current="page">
-                  <span class="page-link">2</span>
-                </li>
-                <li class="page-item"><a class="page-link" href="#">3</a></li>
-                <li class="page-item">
-                  <a class="page-link" href="#">Next</a>
-                </li>
-              </ul>
-            </nav>
           </div>
+          <!--Tab1 Content-->
+          <!--Tab2 Content-->
           <div
             class="tab-pane fade"
             id="nav-protocolos"
             role="tabpanel"
             aria-labelledby="nav-protocolos-tab"
           >
-            ...
+            <form class="filtro">
+              <label class="form-check-label" for="flexCheckChecked"
+                >Pre-Processando:</label
+              >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="offline"
+                id="flexCheckChecked"
+                checked
+              />
+              <label class="form-check-label" for="flexCheckChecked"
+                >Processando:</label
+              >
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value="online"
+                id="flexCheckChecked"
+                checked
+              />
+              <select>
+                <option></option>
+                <option>Numero Protocolo</option>
+                <option>CPF/CNPJ</option>
+                <option>Nome Completo</option>
+              </select>
+              <input id="busca_avancada" type="text" />
+            </form>
           </div>
+          <!--Tab2 Content-->
+          <!--Tab3 Content-->
           <div
             class="tab-pane fade"
             id="nav-consultas"
@@ -215,7 +384,9 @@
           >
             ...
           </div>
+          <!--Tab3 Content-->
         </div>
+        <!--Tabs Content-->
       </section>
     </main>
     <!--Main Content-->
