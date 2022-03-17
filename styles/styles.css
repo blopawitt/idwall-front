@@ -105,6 +105,42 @@ h2 {
   margin-right: 0.5rem;
 }
 .pagination {
+  position: relative;
   padding: 1.2rem;
   margin: 0;
+  bottom: 0rem;
 }
+
+#monitor-header-title{
+  margin: 3rem;
+}
+
+#uf {
+  width: 30%;
+}
+
+.filtro {
+  padding: 2rem;
+}
+
+.page-item.active a {
+  background-color: #8561ff !important;
+  border-color: #8561ff !important;
+  z-index:3;
+}
+
+.page-link:hover {
+  background-color: rgba(133, 97, 255, .3) !important;
+}
+
+.page-link {
+  color: black !important;
+}
+
+.custom-hr {
+  border: 1px solid #8561ff !important;
+  background-color: #8561ff;
+  width: 70%;
+  margin-top: 0;
+}
+
