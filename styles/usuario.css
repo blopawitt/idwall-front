@@ -1,0 +1,40 @@
+
+.botao-customizacao {
+margin: 15px 0 15px 0;
+color: #fafafa;
+border: 1px solid;
+border-radius: 15px;
+width: 150px;
+background-color: #8561ff;
+}
+
+.botao-customizacao:hover {
+background-color: #a488ff;
+transition: .5s;
+}
+
+.adicionar {
+position: absolute;
+margin-left: 15%;
+}
+
+.filtro-botao {
+position: relative;
+margin-left: calc(-150px + 85%);
+}
+
+.icone-filtro {
+color: #fafafa;
+}
+
+.filtro-conteudo {
+
+width: 98%;
+margin: 0 1% 25px 1%;
+}
+
+.li-main {
+width: 98%;
+margin: 0 1% 0 1%;
+margin-bottom: 15px;
+}
