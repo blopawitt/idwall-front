@@ -1,5 +1,10 @@
+@import url("https://rsms.me/inter/inter.css");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
 * {
-  font-family: "Inter";
   font-size: 14px;
 }
 .navbar {
@@ -35,6 +40,7 @@
   background-color: #ffff;
   color: #8561ff !important;
 }
+
 .main-container {
   display: flex;
   flex-direction: column;
@@ -45,6 +51,47 @@
 .content {
   padding: 1rem 2rem;
 }
+
+.botao-customizacao {
+  margin: 15px 0 15px 0;
+  color: #fafafa;
+  border: 1px solid;
+  border-radius: 15px;
+  width: 150px;
+  background-color: #8561ff;
+}
+
+.botao-customizacao:hover {
+  background-color: #a488ff;
+  transition: .5s;
+}
+
+.adicionar {
+  position: absolute;
+  margin-left: 15%;
+}
+
+.filtro-botao {
+  position: relative;
+  margin-left: calc(-150px + 85%);
+}
+
+.icone-filtro {
+  color: #fafafa;
+}
+
+.filtro-conteudo {
+  
+  width: 98%;
+  margin: 0 1% 25px 1%;
+}
+
+.li-main {
+  width: 98%;
+  margin: 0 1% 0 1%;
+  margin-bottom: 15px;
+}
+
 header {
   font-size: 1.7rem;
   display: flex;
@@ -55,12 +102,6 @@ header {
 
 h1 {
   margin-top: 4rem;
-}
-
-@import url("https://rsms.me/inter/inter.css");
-
-body {
-  font-family: "Inter", sans-serif;
 }
 
 /* Purple	Gray	Green	Red	Yellow	Blue	Colors
