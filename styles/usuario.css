@@ -1,40 +1,82 @@
-
 .botao-customizacao {
-margin: 15px 0 15px 0;
-color: #fafafa;
-border: 1px solid;
-border-radius: 15px;
-width: 150px;
-background-color: #8561ff;
+    margin: 15px 0 15px 0;
+    color: #fafafa;
+    border: 1px solid;
+    border-radius: 15px;
+    width: 150px;
+    background-color: #8561ff;
 }
 
 .botao-customizacao:hover {
-background-color: #a488ff;
-transition: .5s;
+    background-color: #a488ff;
+    transition: .5s;
 }
 
 .adicionar {
-position: absolute;
-margin-left: 15%;
+    position: absolute;
+    margin-left: 15%;
+}
+
+.filtro {
+    border-radius: 5px;
 }
 
 .filtro-botao {
-position: relative;
-margin-left: calc(-150px + 85%);
+    position: relative;
+    margin-left: calc(-150px + 85%);
 }
 
-.icone-filtro {
-color: #fafafa;
+.filtro-icone {
+    color: #fafafa;
 }
 
 .filtro-conteudo {
-
-width: 98%;
-margin: 0 1% 25px 1%;
+    width: 98%;
+    margin: 0 1% 25px 1%;
 }
 
 .li-main {
-width: 98%;
-margin: 0 1% 0 1%;
-margin-bottom: 15px;
+    width: 98%;
+    margin: 0 1% 0 1%;
+    margin-bottom: 15px;
 }
+
+.link-li {
+    color: #8561ff;
+}
+
+.link-li:hover {
+    color: #a488ff;
+}
+
+.botao-li {
+    color: #fafafa;
+    border: 1px solid;
+    border-radius: 10px;
+    width: 50px;
+    background-color: #8561ff;
+}
+
+.botao-li:hover {
+    background-color: #a488ff;
+    transition: .5s;
+}
+
+.paginacao {
+    padding: 10px 15px;
+}
+
+.page-item.active a {
+    background-color: #8561ff !important;
+    border-color: #8561ff !important;
+    z-index:3;
+}
+
+.page-link:hover {
+    background-color: rgba(133, 97, 255, .3) !important;
+}
+
+.page-link {
+    color: black !important;
+}
+
