@@ -80,20 +80,20 @@
   <!--Offcanvas menu-->
   <!--Main Content-->
   <main class="main-container min-vh-100">
-    <header id="monitor-header-title">Monitor</header>
+    <header>Monitor</header>
     <section class="content">
       <!--Tabs Header-->
       <nav>
         <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
-          <button class="nav-link active" id="nav-status-tab" data-bs-toggle="tab" data-bs-target="#nav-status"
+          <button class="tab-title nav-link active" id="nav-status-tab" data-bs-toggle="tab" data-bs-target="#nav-status"
             type="button" role="tab" aria-controls="nav-status" aria-selected="true">
             Status Servicos
           </button>
-          <button class="nav-link" id="nav-protocolos-tab" data-bs-toggle="tab" data-bs-target="#nav-protocolos"
+          <button class="tab-title nav-link" id="nav-protocolos-tab" data-bs-toggle="tab" data-bs-target="#nav-protocolos"
             type="button" role="tab" aria-controls="nav-protocolos" aria-selected="false">
             Protocolos
           </button>
-          <button class="nav-link" id="nav-consultas-tab" data-bs-toggle="tab" data-bs-target="#nav-consultas"
+          <button class="tab-title nav-link" id="nav-consultas-tab" data-bs-toggle="tab" data-bs-target="#nav-consultas"
             type="button" role="tab" aria-controls="nav-consultas" aria-selected="false">
             Consultas em Análise
           </button>
@@ -105,25 +105,6 @@
         <!--Tab1 Content-->
         <div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
           <form class="filtro">
-            <!--<label class="form-check-label" for="flexCheckChecked"
-                >Offline:</label
-              >
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="offline"
-                id="flexCheckChecked"
-                checked
-              />
-              <label class="form-check-label" for="flexCheckChecked"
-                >Online:</label
-              >
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="online"
-                id="flexCheckChecked"
-              />-->
             <label for="uf" class="form-label">UF:</label>
             <select id="uf" class="form-select d-inline" aria-label="Default select example">
               <option selected>Todos</option>
@@ -138,14 +119,13 @@
               <option value="TO">TO</option>
             </select>
           </form>
-          <hr class="custom-hr">
-          <div class="row" id="nav-tabContent">
-            <div class="col-sm-6">
+          <div class="row justify-content-between" id="nav-tabContent">
+            <div class="col-sm-6 p-3">
               <div class="card" style="height: 100% !important;">
                 <div class="card-body">
                   <div class="results d-flex justify-content-between">
                     <h5 class="card-title">Offline</h5>
-                    <h5 class="card-title">Resultados: 9</h5>
+                    <h6 class="card-subtitle">Total resultados: 105</h6>
                   </div>
                   <div class="card-text">
                     <ul class="offline">
@@ -178,35 +158,32 @@
                         <i class="offline-icon bi bi-circle-fill"></i>VeiculoDetranSP
                       </li>
                     </ul>
-                  </div>
+                  </div>                  
                 </div>
-                <nav aria-label="...">
-                  <ul class="pagination pagination-sm justify-content-end">
-                    <li class="page-item">
-                      <span class="page-link">Anterior</span>
-                    </li>
-                    <li class="page-item active" aria-current="page">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <span class="page-link">2</span>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">Próximo</a>
-                    </li>
-                  </ul>
-                </nav>
+                <nav>
+                    <ul class="pagination pagination-sm justify-content-end">
+                      <li class="page-item" aria-current="page">
+                        <span class="link-active">1</span>                    
+                      </li>
+                      <li class="page-item">
+                        <a class="link-page" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="link-page" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="link-page" href="#">Próximo</a>
+                      </li>
+                    </ul>
+                  </nav>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 p-3">
               <div class="card" style="height: 100% !important;">
                 <div class="card-body">
-                  <div class="results d-flex justify-content-between">
-                    <h5 class="card-title">Offline</h5>
-                    <h5 class="card-title">Resultados: 9</h5>
+                  <div class="results">
+                    <h5 class="card-title">Online</h5>
+                    <h5 class="card-subtitle">Total resultados: 80</h5>
                   </div>
                   <div class="card-text">
                     <ul class="online">
@@ -238,27 +215,24 @@
                         <i class="online-icon bi bi-circle-fill"></i>InfracoesDetranSE
                       </li>
                     </ul>
-                  </div>
+                  </div>                 
                 </div>
-                <nav aria-label="...">
-                  <ul class="pagination pagination-sm justify-content-end">
-                    <li class="page-item ">
-                      <span class="page-link">Previous</span>
-                    </li>
-                    <li class="page-item active" aria-current="page">
-                      <a class="page-link" href="#">1</a>
-                    </li>
-                    <li class="page-item">
-                      <span class="page-link">2</span>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">3</a>
-                    </li>
-                    <li class="page-item">
-                      <a class="page-link" href="#">Next</a>
-                    </li>
-                  </ul>
-                </nav>
+                <nav>
+                    <ul class="pagination pagination-sm justify-content-end">
+                      <li class="page-item" aria-current="page">
+                        <span class="link-active">1</span>                    
+                      </li>
+                      <li class="page-item">
+                        <a class="link-page" href="#">2</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="link-page" href="#">3</a>
+                      </li>
+                      <li class="page-item">
+                        <a class="link-page" href="#">Próximo</a>
+                      </li>
+                    </ul>
+                  </nav>
               </div>
             </div>
           </div>
@@ -266,19 +240,220 @@
         <!--Tab1 Content-->
         <!--Tab2 Content-->
         <div class="tab-pane fade" id="nav-protocolos" role="tabpanel" aria-labelledby="nav-protocolos-tab">
-          <form class="filtro">
-            <label class="form-check-label" for="flexCheckChecked">Pre-Processando:</label>
-            <input class="form-check-input" type="checkbox" value="offline" id="flexCheckChecked" checked />
-            <label class="form-check-label" for="flexCheckChecked">Processando:</label>
-            <input class="form-check-input" type="checkbox" value="online" id="flexCheckChecked" checked />
-            <select>
-              <option></option>
-              <option>Numero Protocolo</option>
-              <option>CPF/CNPJ</option>
-              <option>Nome Completo</option>
-            </select>
-            <input id="busca_avancada" type="text" />
-          </form>
+          <div class="col-sm-6 p-3">
+            <div class="card" style="height: 100% !important;">
+              <div class="card-body">
+                <table class="protocolos">
+                  <thead>
+                    <tr>
+                      <th>Num Protocolo</th>
+                      <th>Usuario</th>
+                      <th>UF</th>
+                      <th>Quantidade</th>
+                    </tr>
+                    <tr>
+                      <th><input type="text" id="txtColuna1"/></th>
+                      <th><input type="text" id="txtColuna2"/></th>                
+                    </tr>
+                    <th>
+                      <select>
+                        <option selected>Todos</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="MT">MT</option>
+                        <option value="PI">PI</option>
+                        <option value="RO">RO</option>
+                        <option value="RS">RS</option>
+                        <option value="SE">SE</option>
+                        <option value="SP">SP</option>
+                        <option value="TO">TO</option>
+                      </select>
+                    </th>
+                    <th></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Total de 150 protocolos <hr></td>
+                    </tr>
+                    <tr>                     
+                      <td>185</td>
+                      <td><a href="#" class="link-primary">CarolinaRomeu</a></td>
+                      <td>SP</td>
+                      <td>20</td>
+                    </tr>
+                    <tr>
+                      <td>133</td>
+                      <td><a href="#" class="link-primary">RicardoManeira</a></td>
+                      <td>RO</td>
+                      <td>13</td>
+                    </tr>
+                    <tr>
+                      <td>232</td>
+                      <td><a href="#" class="link-primary">LuisaSantos</a></td>
+                      <td>RS</td>
+                      <td>7</td>
+                    </tr>
+                    <tr>
+                      <td>295</td>
+                      <td><a href="#" class="link-primary">CataoAraujo</a></td>
+                      <td>SP</td>
+                      <td>81553</td>
+                    </tr>
+                    <tr>
+                      <td>222</td>
+                      <td><a href="#" class="link-primary">HigorCosta</a></td>
+                      <td>SE</td>
+                      <td>24113</td>
+                    </tr>
+                    <tr>
+                      <td>378</td>
+                      <td><a href="#" class="link-primary">SergioSantos</a></td>
+                      <td>RS</td>
+                      <td>499</td>
+                    </tr>
+                    <tr>
+                      <td>224</td>
+                      <td><a href="#" class="link-primary">VictorBuchalla</a></td>
+                      <td>RS</td>
+                      <td>279</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>                  
+              <nav>
+                <ul class="pagination pagination-sm justify-content-end">
+                  <li class="page-item" aria-current="page">
+                    <span class="link-active">1</span>                    
+                  </li>
+                  <li class="page-item">
+                    <a class="link-page" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="link-page" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="link-page" href="#">Próximo</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+          <div class="col-sm-6 p-3">
+            <div class="card" style="height: 100% !important;">
+              <div class="card-body">
+                <table class="protocolos">
+                  <thead>
+                    <tr>
+                      <th>Num Protocolo</th>
+                      <th>Usuario</th>
+                      <th>UF</th>
+                      <th>Quantidade</th>
+                    </tr>
+                    <tr>
+                      <th><input type="text" id="txtColuna1"/></th>
+                      <th><input type="text" id="txtColuna2"/></th>                
+                    </tr>
+                    <th>
+                      <select>
+                        <option selected>Todos</option>
+                        <option value="CE">CE</option>
+                        <option value="DF">DF</option>
+                        <option value="MT">MT</option>
+                        <option value="PI">PI</option>
+                        <option value="RO">RO</option>
+                        <option value="RS">RS</option>
+                        <option value="SE">SE</option>
+                        <option value="SP">SP</option>
+                        <option value="TO">TO</option>
+                      </select>
+                    </th>
+                    <th></th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Total de 12084 protocolos <hr></td>
+                    </tr>
+                    <tr>
+                      <td>295</td>
+                      <td><a href="#" class="link-primary">JoaoMuniz</a></td>
+                      <td>SP</td>
+                      <td>81553</td>
+                    </tr>
+                    <tr>
+                      <td>222</td>
+                      <td><a href="#" class="link-primary">CatarinaBorges</a></td>
+                      <td>SE</td>
+                      <td>24113</td>
+                    </tr>
+                    <tr>
+                      <td>378</td>
+                      <td><a href="#" class="link-primary">AndersonRodrigues</a></td>
+                      <td>RS</td>
+                      <td>499</td>
+                    </tr>
+                    <tr>
+                      <td>224</td>
+                      <td><a href="#" class="link-primary">BrunaVargas</a></td>
+                      <td>RS</td>
+                      <td>279</td>
+                    </tr>
+                    <tr>
+                      <td>189</td>
+                      <td><a href="#" class="link-primary">MariaQuinalia</a></td>
+                      <td>SP</td>
+                      <td>200</td>
+                    </tr>
+                    <tr>
+                      <td>112</td>
+                      <td><a href="#" class="link-primary">VictorBuchalla</a></td>
+                      <td>PI</td>
+                      <td>154</td>
+                    </tr>
+                    <tr>
+                      <td>344</td>
+                      <td><a href="#" class="link-primary">BrunoCarvalho</a></td>
+                      <td>PI</td>
+                      <td>100</td>
+                    </tr>
+                    <tr>
+                      <td>555</td>
+                      <td><a href="#" class="link-primary">NicolasAraujo</a></td>
+                      <td>DF</td>
+                      <td>78</td>
+                    </tr>
+                    <tr>
+                      <td>325</td>
+                      <td><a href="#" class="link-primary">BrunoPinheiro</a></td>
+                      <td>RS</td>
+                      <td>60</td>
+                    </tr>
+                    <tr>
+                      <td>123</td>
+                      <td><a href="#" class="link-primary">MariliaFiocruz</a></td>
+                      <td>DF</td>
+                      <td>49</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>                  
+              <nav>
+                <ul class="pagination pagination-sm justify-content-end">
+                  <li class="page-item" aria-current="page">
+                    <span class="link-active">1</span>                    
+                  </li>
+                  <li class="page-item">
+                    <a class="link-page" href="#">2</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="link-page" href="#">3</a>
+                  </li>
+                  <li class="page-item">
+                    <a class="link-page" href="#">Próximo</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
         </div>
         <!--Tab2 Content-->
         <!--Tab3 Content-->
@@ -299,37 +474,36 @@
               <th scope="col">Data</th>
               <th scope="col">Quantidade</th>
             </tr>
+          </thead>
           <tbody>
             <tr>
-              <th scope="row">1</th>
+              <td scope="row">1</td>
               <td><a href="#" class="link-primary">ProcessosTJSE</a></td>
               <td>Sergipe</td>
               <td>11/02/2021</td>
               <td>1137</td>
             </tr>
             <tr>
-              <th scope="row">2</th>
+              <td scope="row">2</td>
               <td><a href="#" class="link-primary">AntecedentesTRF4SegundaInstancia</a></td>
               <td>Porto Alegre</td>
               <td>07/05/2020</td>
               <td>844</td>
             </tr>
             <tr>
-              <th scope="row">3</th>
+              <td scope="row">3</td>
               <td><a href="#" class="link-primary">AntecedentesTRF2</a></td>
               <td>Rio de Janeiro</td>
               <td>08/13/2019</td>
               <td>603</td>
             </tr>
             <tr>
-              <th scope="row">4</th>
+              <td scope="row">4</td>
               <td><a href="#" class="link-primary">AntecedentesTRF1</a></td>
               <td>Brasilia</td>
               <td>12/04/2020</td>
               <td>552</td>
             </tr>
-          </thead>
-          <tbody>
           </tbody>
         </table>
         </div>
@@ -346,5 +520,4 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
     crossorigin="anonymous"></script>
 </body>
-
 </html>

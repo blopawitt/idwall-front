@@ -1,3 +1,36 @@
+.tab-title {
+  font-size: 1.2rem;
+  color: #595959;
+}
+.tab-pane {
+  background-color: #fafafa !important;
+}
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card-body {
+  padding: 1rem 1rem 0 1rem;
+}
+.card-title {
+  padding-left: 5rem;
+  margin: 1rem 0;
+  text-decoration: underline;
+}
+.card-subtitle {
+  padding-right: 2rem;
+  margin: 1rem 0;
+}
+.card-subtitle {
+  font-size: 0.9rem;
+  color: #8c8c8c;
+  font-weight: 500;
+  text-align: center;
+}
 .offline-version {
   font-weight: 600;
   font-size: 1rem;
@@ -5,6 +38,7 @@
 .offline,
 .online {
   list-style: none;
+  margin-bottom: 0;
 }
 .offline li,
 .online li {
@@ -16,12 +50,25 @@
 .offline-icon {
   font-size: 0.6rem;
   color: #cf1322;
-  margin-right: 0.5rem;
+  margin-right: 2rem;
 }
 .online-icon {
   font-size: 0.6rem;
   color: #389e0d;
-  margin-right: 0.5rem;
+  margin-right: 2rem;
+}
+.form-label {
+  width: 5%;
+  margin-bottom: 0 !important;
+  text-align: center;
+}
+.form-select {
+  width: 10%;
+}
+.filtro {
+  padding: 2rem 0 2rem;
+  display: flex;
+  align-items: center;
 }
 .pagination {
   position: relative;
@@ -29,37 +76,52 @@
   margin: 0;
   bottom: 0rem;
 }
-
-#monitor-header-title{
-  margin: 3rem;
+.pagination span,
+.pagination a {
+  border-style: none !important;
+}
+.link-page {
+  color: #595959;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.link-active {
+  color: #fff;
+  background-color: #50f;
+  border-radius: 100%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.link-page:hover {
+  color: #50f;
 }
 
-#uf {
-  width: 30%;
+/* Tab2 */
+.protocolos {
+  width: 100%;
+  border: solid 1px;
+  text-align: left;
+  border-collapse: collapse;
 }
 
-.filtro {
-  padding: 2rem;
+.protocolos tbody tr {
+  border: solid 1px;
+  height: 30px;
+  cursor: pointer;
 }
 
-.page-item.active a {
-  background-color: #8561ff !important;
-  border-color: #8561ff !important;
-  z-index:3;
+.protocolos thead {
+  background: #f3f2ff;
 }
 
-.page-link:hover {
-  background-color: rgba(133, 97, 255, .3) !important;
+.protocolos thead th:nth-child(1) {
+  width: 100px;
 }
 
-.page-link {
-  color: black !important;
+.protocolos input {
+  width: 100%;
 }
-
-.custom-hr {
-  border: 1px solid #8561ff !important;
-  background-color: #8561ff;
-  width: 70%;
-  margin-top: 0;
-}
-
