@@ -44,13 +44,28 @@
     font-size: 13px;
 }
 
-.checkbox-filtro {
+.form-control {
+    box-shadow: none !important;
+}
+
+.form-control:focus {
+    border: 1.5px black solid !important;
+}
+
+.form-check-input {
+    box-shadow: none !important;
     border-color: lightgray !important;
     margin-right: 10px;
     padding: 10px 20px;
+    background-color: transparent;
 }
 
-.checkbox-filtro-texto {
+.form-check-input:checked {
+    background-color: #8561ff !important;
+}
+
+
+.form-check-label {
     margin-top: 2px;
     font-weight: bold;
     font-size: 15px;
@@ -100,4 +115,3 @@
 .page-link {
     color: black !important;
 }
-
