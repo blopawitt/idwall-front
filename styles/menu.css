@@ -21,11 +21,35 @@
 .menu-button:focus {
     box-shadow: none;
 }
+
+.sair-navbar {
+    background-color: white;
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #50f;
+}
+
+.sair-navbar:hover {
+    color: #8561ff;
+    transition: .2s;
+}
+
+.svg-sair {
+    margin-right: 5px;
+}
+
+.sair-navbar-icon {
+    color: #50f;
+}
+
 .sidebar-nav {
     width: 120px;
     top: 60px;
     height: calc(100% - var(60px));
-    background-color: #8561ff;
+    background-color: #50f;
     padding: 0.5rem 0;
 }
 .sidebar-body {
@@ -36,7 +60,7 @@
     padding: 0.5rem 1rem !important;
 }
 .dropdown-monitor {
-    background-color: #8561ff;
+    background-color: #50f;
     margin: 0 !important;
     padding: 0 !important;
     border-left: none;
@@ -48,12 +72,12 @@
 }
 .dropdown-item:hover {
     color: #262626;
-    background-color: #8561ff;
+    background-color: #50f;
 }
 .sidebar-link:hover,
 .active {
     background-color: #ffff;
-    color: #8561ff !important;
+    color: #50f !important;
 }
 
 .main-container {
@@ -69,9 +93,14 @@
 
 header {
     font-size: 1.7rem;
-    color: #000;
+    color: #50f;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1rem;
+}
+
+button:hover path {
+    color: #8561ff;
+    transition: .2s;
 }

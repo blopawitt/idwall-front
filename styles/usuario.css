@@ -1,7 +1,7 @@
 .botao-customizacao {
     margin: 15px 0 15px 0;
     color: #fafafa;
-    border: 1px solid;
+    border: 2px solid;
     border-radius: 15px;
     width: 150px;
     background-color: #8561ff;
@@ -27,12 +27,33 @@
 }
 
 .filtro-icone {
-    color: #fafafa;
+    color: #fafafa !important;
+}
+
+.filtro-div {
+    width: 98%;
+    margin: 0 1% 25px 1%;
 }
 
 .filtro-conteudo {
-    width: 98%;
-    margin: 0 1% 25px 1%;
+    width: 100%;
+}
+
+
+.lable-filtro {
+    font-size: 13px;
+}
+
+.checkbox-filtro {
+    border-color: lightgray !important;
+    margin-right: 10px;
+    padding: 10px 20px;
+}
+
+.checkbox-filtro-texto {
+    margin-top: 2px;
+    font-weight: bold;
+    font-size: 15px;
 }
 
 .li-main {
