@@ -5,6 +5,25 @@
 .tab-pane {
   background-color: #fafafa !important;
 }
+
+.nav-link.active {
+  background-color:  transparent !important;
+  color: #595959 !important;
+  border-top: 4px solid;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  border-color: #5500FF !important;
+}
+
+.nav-link:hover {
+  color: #595959;
+  border-top: 4px solid;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+
 .results {
   display: flex;
   align-items: center;
@@ -100,9 +119,14 @@
   color: #50f;
 }
 
+.quantidade-color {
+  background-color: #f3f2ff !important;
+}
+
 /* Tab2 */
 .protocolos {
   width: 100%;
+  height: 100%;
   border: solid 1px;
   text-align: left;
   border-collapse: collapse;
@@ -112,6 +136,10 @@
   border: solid 1px;
   height: 30px;
   cursor: pointer;
+}
+
+.uf-filter {
+  padding: 3px;
 }
 
 .protocolos thead {
