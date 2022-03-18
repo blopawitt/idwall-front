@@ -1,40 +1,136 @@
-
 .botao-customizacao {
-margin: 15px 0 15px 0;
-color: #fafafa;
-border: 1px solid;
-border-radius: 15px;
-width: 150px;
-background-color: #8561ff;
+  margin: 15px 0 15px 0;
+  color: #fafafa;
+  border: 2px solid;
+  border-radius: 15px;
+  width: 150px;
+  background-color: #8561ff;
 }
 
 .botao-customizacao:hover {
-background-color: #a488ff;
-transition: .5s;
+  background-color: #a488ff;
+  transition: 0.5s;
 }
 
 .adicionar {
-position: absolute;
-margin-left: 15%;
+  position: absolute;
+  margin-left: 15%;
+}
+
+.filtro {
+  border-radius: 5px;
 }
 
 .filtro-botao {
-position: relative;
-margin-left: calc(-150px + 85%);
+  position: relative;
+  margin-left: calc(-150px + 85%);
 }
 
-.icone-filtro {
-color: #fafafa;
+.filtro-icone {
+  color: #fafafa !important;
+}
+
+.filtro-div {
+  width: 98%;
+  margin: 0 1% 25px 1%;
 }
 
 .filtro-conteudo {
+  width: 100%;
+}
 
-width: 98%;
-margin: 0 1% 25px 1%;
+.lable-filtro {
+  font-size: 13px;
+}
+
+.form-control {
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  border: 1.5px black solid !important;
+}
+
+.form-check-input {
+  box-shadow: none !important;
+  border-color: lightgray !important;
+  margin-right: 10px;
+  padding: 10px 20px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.form-check-input:checked {
+  background-color: #a488ff !important;
+}
+
+.form-check-label {
+  margin-top: 2px;
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .li-main {
-width: 98%;
-margin: 0 1% 0 1%;
-margin-bottom: 15px;
+  width: 98%;
+  margin: 0 1% 0 1%;
+  margin-bottom: 15px;
+}
+
+.link-li {
+  color: #8561ff;
+}
+
+.link-li:hover {
+  color: #a488ff;
+}
+
+.botao-li {
+  color: #fafafa;
+  border: 1px solid;
+  border-radius: 10px;
+  width: 50px;
+  background-color: #8561ff;
+}
+
+.botao-li:hover {
+  background-color: #a488ff;
+  transition: 0.5s;
+}
+
+.pagination {
+  position: relative;
+  padding: 1.2rem;
+  margin: 0;
+  bottom: 0rem;
+}
+
+.pagination span,
+.pagination a {
+  border-style: none !important;
+}
+
+.link-page {
+  color: #595959;
+  padding: 0.2rem 1.5rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link-active {
+  color: #fff;
+  background-color: #50f;
+  border-radius: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.link-page:hover {
+  color: #50f;
+}
+
+tr:hover {
+  border-bottom: 2px #c5b4ff solid;
 }

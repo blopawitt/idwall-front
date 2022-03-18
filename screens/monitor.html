@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
+  <link rel="stylesheet" href="../styles/monitor.css" />
+  <link rel="stylesheet" href="../styles/menu.css" />
+  <title>Monitor</title>
+</head>
+
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-light fixed-top">
+    <div class="container-fluid">
+      <!--offcanvas trigger-->
+      <button class="menu-button navbar-toggler" type="button" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+        <span class="custom-toggler navbar-toggler-icon" data-bs-target="#offcanvasWithBothOptions"></span>
+      </button>
+      <!--offcanvas trigger-->
+      <a class="navbar-brand me-auto" href="#"><img src="../img/logo-idwall.png" width="70px" alt="Idwall Logo" /></a>
+      <a class="menu-item nav-item me-4" href="#">Sair</a>
+      <!--Navbar-->
+      <!--Offcanvas menu-->
+      <div class="offcanvas offcanvas-start sidebar-nav" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+        <div class="sidebar-body offcanvas-body">
+          <ul class="sidebar-list navbar-nav">
+            <li class="sidebar-item nav-item">
+              <a class="sidebar-link nav-link" href="#">Protocolos</a>
+            </li>
+            <li class="sidebar-item nav-item">
+              <a class="sidebar-link nav-link" href="#">Documentos</a>
+            </li>
+            <li class="sidebar-item nav-item">
+              <a class="sidebar-link nav-link" href="./usuario.html">Usuários</a>
+            </li>
+            <li class="sidebar-item nav-item">
+              <a class="sidebar-link nav-link" href="#">Fontes</a>
+            </li>
+            <li class="sidebar-item nav-item">
+              <a class="sidebar-link nav-link" href="#">Matrizes</a>
+            </li>
+            <li class="sidebar-item nav-item">
+              <a class="sidebar-link nav-link" href="#">Regras</a>
+            </li>
+            <li class="sidebar-item nav-item">
+              <a class="sidebar-link nav-link" href="#">Atributos</a>
+            </li>
+            <li class="sidebar-item nav-item dropdown">
+              <a class="sidebar-link nav-link active dropdown-toggle" aria-current="page" href="monitor.html"
+                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Monitor
+              </a>
+              <ul class="dropdown-monitor dropdown-menu" aria-labelledby="navbarDropdown">
+                <li>
+                  <a class="dropdown-item text-wrap" href="#">Status</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-wrap" href="#">Protocolos</a>
+                </li>
+                <li>
+                  <a class="dropdown-item text-wrap" href="#">Consultas em Análise</a>
+                </li>
+              </ul>
+            </li>
+            <li class="sidebar-item nav-item">
+              <a class="sidebar-link nav-link" href="#">Organizações</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Offcanvas menu-->
+  <!--Main Content-->
+  <main class="main-container min-vh-100">
+    <header>Monitor</header>
+    <section class="content">
+      <!--Tabs Header-->
+      <nav>
+        <div class="div-tab-title nav nav-tabs nav-justified" id="nav-tab" role="tablist">
+          <button class="tab-title nav-link active" id="nav-status-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-status" type="button" role="tab" aria-controls="nav-status" aria-selected="true">
+            Status Servicos
+          </button>
+          <button class="tab-title nav-link" id="nav-protocolos-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-protocolos" type="button" role="tab" aria-controls="nav-protocolos"
+            aria-selected="false">
+            Protocolos
+          </button>
+          <button class="tab-title nav-link" id="nav-consultas-tab" data-bs-toggle="tab" data-bs-target="#nav-consultas"
+            type="button" role="tab" aria-controls="nav-consultas" aria-selected="false">
+            Consultas em Análise
+          </button>
+        </div>
+      </nav>
+      <!--Tabs Header-->
+      <!--Tabs Content-->
+      <div class="tab-content" id="nav-tabContent">
+        <!--Tab1 Content-->
+        <div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
+          <!-- Filter -->
+          <div class="outside-card">
+            <div class="card-header">
+                <h1>Online</h1>
+                <button class="botao-customizacao" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="dropdown-icon bi bi-chevron-down"></i>
+                </button>
+            </div>
+            <div class="collapse dropdown-div" id="collapse1">
+                <div class="card dropdown">
+                    <div class="card-body">
+                        <form class="filtro">
+                            <label for="uf" class="form-label label-tab1">UF:</label>
+                            <select id="uf" class="form-select d-inline" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="MT">MT</option>
+                                <option value="PI">PI</option>
+                                <option value="RO">RO</option>
+                                <option value="RS">RS</option>
+                                <option value="SE">SE</option>
+                                <option value="SP">SP</option>
+                                <option value="TO">TO</option>
+                            </select>
+                        </form>
+                        <div class="results">
+                            <h6 class="card-subtitle">Total resultados: 105</h6>
+                        </div>
+                        <div class="card-content">
+                            <table class="online">
+                            <tr>
+                                <td><i class="online-icon bi bi-circle-fill"></i>InfracoesPrefeituraSP</td>
+                                <td><i class="online-icon bi bi-circle-fill"></i>InfracoesRS</td> 
+                                <td><i class="online-icon bi bi-circle-fill"></i>JuntaComercialDF</td> 
+                                <td><i class="online-icon bi bi-circle-fill"></i>MultasPoliciaRodoviariaFederal</td>  
+                            </tr>
+                            <tr>
+                                <td><i class="online-icon bi bi-circle-fill"></i>NovoAntecedentesMT</td>
+                                <td><i class="online-icon bi bi-circle-fill"></i>RestituicaoReceitaFederal</td> 
+                                <td><i class="online-icon bi bi-circle-fill"></i>SIAFI</td> 
+                                <td><i class="online-icon bi bi-circle-fill"></i>SSDMEC</td>  
+                            </tr>
+                            <tr>
+                                <td><i class="online-icon bi bi-circle-fill"></i>VeiculoDetranSP</td>
+                                <td><i class="online-icon bi bi-circle-fill"></i>RestituicaoReceitaFederal</td> 
+                                <td><i class="online-icon bi bi-circle-fill"></i>SIAFI</td> 
+                                <td><i class="online-icon bi bi-circle-fill"></i>SSDMEC</td>  
+                            </tr>
+                            <tr>
+                                <td><i class="online-icon bi bi-circle-fill"></i>AntecedenteDF</td>
+                                <td><i class="online-icon bi bi-circle-fill"></i>AntecedentesMT</td> 
+                                <td><i class="online-icon bi bi-circle-fill"></i>AntecedentesRO</td> 
+                                <td><i class="online-icon bi bi-circle-fill"></i>AntecedentesTO</td>  
+                            </tr>
+                            <tr>
+                                <td><i class="online-icon bi bi-circle-fill"></i>CADICON</td>
+                                <td><i class="online-icon bi bi-circle-fill"></i>InfracoesDetranCE</td> 
+                                <td><i class="online-icon bi bi-circle-fill"></i>InfracoesDetranPI</td> 
+                                <td><i class="online-icon bi bi-circle-fill"></i>InfracoesDetranSE</td>  
+                            </tr>
+                            </table>
+                        </div>
+                        <nav>
+                            <ul class="pagination pagination-sm justify-content-end">
+                                <li class="page-item" aria-current="page">
+                                <span class="link-active">1</span>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">Próximo</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+                <!-- Filter -->
+          </div>
+          <div class="outside-card">
+            <div class="card-header">
+                <h1>Offline</h1>
+                <button class="botao-customizacao" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="dropdown-icon bi bi-chevron-down"></i>
+                </button>
+            </div>
+            <div class="collapse dropdown-div" id="collapse2">
+                <div class="card dropdown">
+                    <div class="card-body">
+                        <form class="filtro">
+                            <label for="uf" class="form-label label-tab1">UF:</label>
+                            <select id="uf" class="form-select d-inline" aria-label="Default select example">
+                                <option selected></option>
+                                <option value="CE">CE</option>
+                                <option value="DF">DF</option>
+                                <option value="MT">MT</option>
+                                <option value="PI">PI</option>
+                                <option value="RO">RO</option>
+                                <option value="RS">RS</option>
+                                <option value="SE">SE</option>
+                                <option value="SP">SP</option>
+                                <option value="TO">TO</option>
+                            </select>
+                        </form>
+                        <div class="results">
+                            <h6 class="card-subtitle">Total resultados: 105</h6>
+                        </div>
+                        <div class="card-content">
+                            <table class="online">
+                            <tr>
+                                <td><i class="offline-icon bi bi-circle-fill"></i>InfracoesPrefeituraSP</td>
+                                <td><i class="offline-icon bi bi-circle-fill"></i>InfracoesRS</td> 
+                                <td><i class="offline-icon bi bi-circle-fill"></i>JuntaComercialDF</td> 
+                                <td><i class="offline-icon bi bi-circle-fill"></i>MultasPoliciaRodoviariaFederal</td>  
+                            </tr>
+                            <tr>
+                                <td><i class="offline-icon bi bi-circle-fill"></i>NovoAntecedentesMT</td>
+                                <td><i class="offline-icon bi bi-circle-fill"></i>RestituicaoReceitaFederal</td> 
+                                <td><i class="offline-icon bi bi-circle-fill"></i>SIAFI</td> 
+                                <td><i class="offline-icon bi bi-circle-fill"></i>SSDMEC</td>  
+                            </tr>
+                            <tr>
+                                <td><i class="offline-icon bi bi-circle-fill"></i>VeiculoDetranSP</td>
+                                <td><i class="offline-icon bi bi-circle-fill"></i>RestituicaoReceitaFederal</td> 
+                                <td><i class="offline-icon bi bi-circle-fill"></i>SIAFI</td> 
+                                <td><i class="offline-icon bi bi-circle-fill"></i>SSDMEC</td>  
+                            </tr>
+                            <tr>
+                                <td><i class="offline-icon bi bi-circle-fill"></i>AntecedenteDF</td>
+                                <td><i class="offline-icon bi bi-circle-fill"></i>AntecedentesMT</td> 
+                                <td><i class="offline-icon bi bi-circle-fill"></i>AntecedentesRO</td> 
+                                <td><i class="offline-icon bi bi-circle-fill"></i>AntecedentesTO</td>  
+                            </tr>
+                            <tr>
+                                <td><i class="offline-icon bi bi-circle-fill"></i>CADICON</td>
+                                <td><i class="offline-icon bi bi-circle-fill"></i>InfracoesDetranCE</td> 
+                                <td><i class="offline-icon bi bi-circle-fill"></i>InfracoesDetranPI</td> 
+                                <td><i class="offline-icon bi bi-circle-fill"></i>InfracoesDetranSE</td>  
+                            </tr>
+                            </table>
+                        </div>
+                        <nav>
+                            <ul class="pagination pagination-sm justify-content-end">
+                                <li class="page-item" aria-current="page">
+                                <span class="link-active">1</span>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">Próximo</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+                <!-- Filter -->
+          </div>
+        </div>
+        <!--Tab1 Content-->
+        <!--Tab2 Content-->
+        <div class="tab-pane fade" id="nav-protocolos" role="tabpanel" aria-labelledby="nav-protocolos">
+          <!-- Filter -->
+          <div class="outside-card">
+            <div class="card-header">
+                <h1>Pre-processando</h1>
+                <button class="botao-customizacao" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="dropdown-icon bi bi-chevron-down"></i>
+                </button>
+            </div>
+            <div class="collapse dropdown-div" id="collapse1">
+                <div class="card dropdown">
+                     <div class="card-body">
+                        <form class="filtro filtro-protocolo">
+                            <div>
+                                <label for="num-protocolo" class="label-protocolo form-label">Protocolo:</label>
+                                <input type="text" class="form-control" id="num-protocolo">
+                            </div>
+                            <div>
+                                <label for="nm-usu" class="">Usuário:</label>
+                                <input type="text" class="form-control" id="nm-usu">
+                            </div>
+                        </form>
+                        <div class="results">
+                            <h6 class="card-subtitle">Total resultados: 120084</h6>
+                        </div>
+                        <div class="card-content">
+                            <table class="protocolos table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Protocolo</th>
+                                    <th scope="col">Usuário</th>
+                                    <th scope="col">Quantidade</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>185</td>
+                                    <td><a href="#" class="link-primary">CarolinaRomeu</a></td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>133</td>
+                                    <td><a href="#" class="link-primary">RicardoManeira</a></td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>232</td>
+                                    <td><a href="#" class="link-primary">LuisaSantos</a></td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>295</td>
+                                    <td><a href="#" class="link-primary">CataoAraujo</a></td>
+                                    <td>81553</td>
+                                </tr>
+                                <tr>
+                                    <td>222</td>
+                                    <td><a href="#" class="link-primary">HigorCosta</a></td>
+                                    <td>24113</td>
+                                </tr>
+                                <tr>
+                                    <td>378</td>
+                                    <td><a href="#" class="link-primary">SergioSantos</a></td>
+                                    <td>499</td>
+                                </tr>
+                                <tr>
+                                    <td>224</td>
+                                    <td><a href="#" class="link-primary">VictorBuchalla</a></td>
+                                    <td>279</td>
+                                </tr>
+                                <tr>
+                                    <td>346</td>
+                                    <td><a href="#" class="link-primary">DanielCarlos</a></td>
+                                    <td>143</td>
+                                </tr>
+                                <tr>
+                                    <td>135</td>
+                                    <td><a href="#" class="link-primary">GabrielPereira</a></td>
+                                    <td>657</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav>
+                            <ul class="pagination pagination-sm justify-content-end">
+                                <li class="page-item" aria-current="page">
+                                <span class="link-active">1</span>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">Próximo</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+                <!-- Filter -->
+          </div>
+          <div class="outside-card">
+            <div class="card-header">
+                <h1>Processando</h1>
+                <button class="botao-customizacao" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapseExample">
+                    <i class="dropdown-icon bi bi-chevron-down"></i>
+                </button>
+            </div>
+            <div class="collapse dropdown-div" id="collapse2">
+                <div class="card dropdown">
+                    <div class="card-body">
+                        <form class="filtro filtro-protocolo">
+                            <div>
+                                <label for="num-protocolo" class="label-protocolo form-label">Protocolo:</label>
+                                <input type="text" class="form-control" id="num-protocolo">
+                            </div>
+                            <div>
+                                <label for="nm-usu" class="">Usuário:</label>
+                                <input type="text" class="form-control" id="nm-usu">
+                            </div>
+                        </form>
+                        <div class="results">
+                            <h6 class="card-subtitle">Total resultados: 120084</h6>
+                        </div>
+                        <div class="card-content">
+                            <table class="protocolos table">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Protocolo</th>
+                                    <th scope="col">Usuário</th>
+                                    <th scope="col">Quantidade</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>185</td>
+                                    <td><a href="#" class="link-primary">CarolinaRomeu</a></td>
+                                    <td>20</td>
+                                </tr>
+                                <tr>
+                                    <td>133</td>
+                                    <td><a href="#" class="link-primary">RicardoManeira</a></td>
+                                    <td>13</td>
+                                </tr>
+                                <tr>
+                                    <td>232</td>
+                                    <td><a href="#" class="link-primary">LuisaSantos</a></td>
+                                    <td>7</td>
+                                </tr>
+                                <tr>
+                                    <td>295</td>
+                                    <td><a href="#" class="link-primary">CataoAraujo</a></td>
+                                    <td>81553</td>
+                                </tr>
+                                <tr>
+                                    <td>222</td>
+                                    <td><a href="#" class="link-primary">HigorCosta</a></td>
+                                    <td>24113</td>
+                                </tr>
+                                <tr>
+                                    <td>378</td>
+                                    <td><a href="#" class="link-primary">SergioSantos</a></td>
+                                    <td>499</td>
+                                </tr>
+                                <tr>
+                                    <td>224</td>
+                                    <td><a href="#" class="link-primary">VictorBuchalla</a></td>
+                                    <td>279</td>
+                                </tr>
+                                <tr>
+                                    <td>346</td>
+                                    <td><a href="#" class="link-primary">DanielCarlos</a></td>
+                                    <td>143</td>
+                                </tr>
+                                <tr>
+                                    <td>135</td>
+                                    <td><a href="#" class="link-primary">GabrielPereira</a></td>
+                                    <td>657</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <nav>
+                            <ul class="pagination pagination-sm justify-content-end">
+                                <li class="page-item" aria-current="page">
+                                <span class="link-active">1</span>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">2</a>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">3</a>
+                                </li>
+                                <li class="page-item">
+                                <a class="link-page" href="#">Próximo</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+                <!-- Filter -->
+          </div>
+        </div>   
+        <!--Tab2 Content-->
+        <!--Tab3 Content-->
+        <div class="tab-pane fade" id="nav-consultas" role="tabpanel" aria-labelledby="nav-consultas">
+          <div class="card">
+            <div class="card-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Localidade</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Quantidade</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row">1</td>
+                    <td><a href="#" class="link-primary">ProcessosTJSE</a></td>
+                    <td>Sergipe</td>
+                    <td>11/02/2021</td>
+                    <td>1137</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">2</td>
+                    <td><a href="#" class="link-primary">AntecedentesTRF4SegundaInstancia</a></td>
+                    <td>Porto Alegre</td>
+                    <td>07/05/2020</td>
+                    <td>844</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">3</td>
+                    <td><a href="#" class="link-primary">AntecedentesTRF2</a></td>
+                    <td>Rio de Janeiro</td>
+                    <td>08/13/2019</td>
+                    <td>603</td>
+                  </tr>
+                  <tr>
+                    <td scope="row">4</td>
+                    <td><a href="#" class="link-primary">AntecedentesTRF1</a></td>
+                    <td>Brasilia</td>
+                    <td>12/04/2020</td>
+                    <td>552</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Tab3 Content-->
+      </div>
+      <!--Tabs Content-->
+    </section>
+  </main>
+  <!--Main Content-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
