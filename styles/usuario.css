@@ -58,12 +58,12 @@
     margin-right: 10px;
     padding: 10px 20px;
     background-color: transparent;
+    cursor: pointer;
 }
 
 .form-check-input:checked {
-    background-color: #8561ff !important;
+    background-color: #a488ff !important;
 }
-
 
 .form-check-label {
     margin-top: 2px;
@@ -93,25 +93,46 @@
     background-color: #8561ff;
 }
 
+
 .botao-li:hover {
     background-color: #a488ff;
     transition: .5s;
 }
 
-.paginacao {
-    padding: 10px 15px;
+.pagination {
+    position: relative;
+    padding: 1.2rem;
+    margin: 0;
+    bottom: 0rem;
 }
 
-.page-item.active a {
-    background-color: #8561ff !important;
-    border-color: #8561ff !important;
-    z-index:3;
+.pagination span,
+.pagination a {
+    border-style: none !important;
 }
 
-.page-link:hover {
-    background-color: rgba(133, 97, 255, .3) !important;
+.link-page {
+    color: #595959;
+    padding: 0.2rem 1.5rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-decoration: none;
 }
 
-.page-link {
-    color: black !important;
+.link-active {
+    color: #fff;
+    background-color: #50f;
+    border-radius: 100%;
+    padding: 0.5rem 1rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.link-page:hover {
+    color: #50f;
+}
+
+tr:hover {
+    border-bottom: 2px #c5b4ff solid;
 }
