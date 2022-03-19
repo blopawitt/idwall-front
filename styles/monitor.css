@@ -199,3 +199,7 @@ div .tab-title {
 .protocolos thead th:nth-child(3) {
   width: 20%;
 }
+
+.consultas {
+  margin-top: 2rem;
+}
