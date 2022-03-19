@@ -1,3 +1,87 @@
+.outside-card {
+  margin-top: 2rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  padding: 1.5rem 0 0;
+}
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fafafa;
+  border: none;
+}
+.card-header h1 {
+  font-size: 1.5rem;
+  padding-left: 2rem;
+  font-weight: 550;
+  color: #8561ff;
+}
+.card {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.card-body {
+  padding: 1rem 1rem 0 1rem;
+}
+.card-subtitle {
+  padding-right: 2rem;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+  color: #8c8c8c;
+  font-weight: 500;
+  text-align: center;
+}
+.botao-customizacao {
+  border-style: none;
+  border-radius: 15px;
+  width: 60px;
+  background-color: #d9d9d9;
+  align-self: flex-end;
+  margin: 1.1rem 3rem 1.2rem 0;
+}
+.botao-customizacao:hover {
+  background-color: #a488ff;
+  transition: 0.5s;
+}
+.dropdown-div {
+  width: 100%;
+}
+.dropdown-icon {
+  font-size: 1rem;
+}
+.div-tab-title,
+div .tab-title {
+  border-style: none !important;
+}
+.tab-title {
+  font-size: 1.2rem;
+  color: #595959;
+}
+.tab-pane {
+  background-color: #fafafa !important;
+}
+.tab-title.active {
+  background-color: transparent !important;
+  border-top: 4px solid #50f !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+  color: #595959 !important;
+}
+.tab-title:hover {
+  color: #595959;
+  border-top: 4px solid #e8e8e8 !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  border-right: none !important;
+}
+.tab-content {
+  border-top: 1px solid #d9d9d9;
+}
+.results {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
 .offline-version {
   font-weight: 600;
   font-size: 1rem;
@@ -5,23 +89,40 @@
 .offline,
 .online {
   list-style: none;
-}
-.offline li,
-.online li {
-  padding-left: 0.5rem;
-  font-size: 12px;
+  margin-bottom: 0;
   display: flex;
-  align-items: center;
+  justify-content: space-evenly !important;
+}
+.offline td,
+.online td {
+  padding: 0.4rem 3rem 0.4rem 0.4rem;
 }
 .offline-icon {
-  font-size: 0.6rem;
+  font-size: 0.8rem;
   color: #cf1322;
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
 }
 .online-icon {
   font-size: 0.6rem;
   color: #389e0d;
-  margin-right: 0.5rem;
+  margin-right: 0.8rem;
+}
+.label-tab1 {
+  width: 5%;
+  margin-bottom: 0 !important;
+  text-align: center;
+}
+.form-select {
+  width: 8%;
+  padding: 1px 0.5rem;
+}
+.filtro {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  border: 1px solid;
+  border-radius: 5px;
+  border-color: #d9d9d9;
 }
 .pagination {
   position: relative;
@@ -29,37 +130,72 @@
   margin: 0;
   bottom: 0rem;
 }
-
-#monitor-header-title{
-  margin: 3rem;
+.pagination span,
+.pagination a {
+  border-style: none !important;
+}
+.link-page {
+  color: #595959;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.link-active {
+  color: #fff;
+  background-color: #50f;
+  border-radius: 100%;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+.link-page:hover {
+  color: #50f;
 }
 
-#uf {
+/*Tab2*/
+.card-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.filtro-protocolo {
+  justify-content: flex-start;
+  padding: 1rem;
+}
+.filtro-protocolo div {
+  display: flex;
+  padding: 0 0.5rem;
+}
+.label-protocolo {
+  margin: 0 !important;
+  text-align: center !important;
+}
+#num-protocolo,
+#nm-usu {
+  padding: 0 1rem;
+  margin-left: 0.5rem;
+}
+.protocolos th {
+  padding: 0.4rem;
+}
+.protocolos td {
+  padding: 0.4rem 1rem 0.4rem 0.4rem;
+}
+.protocolos td {
+  border-bottom: solid 1.2px #d8d8d8;
+  height: 1.6rem;
+}
+.protocolos thead {
+  border-bottom: solid 1.2px;
+  height: 1.7rem;
+}
+
+.protocolos thead th:nth-child(1) {
   width: 30%;
 }
-
-.filtro {
-  padding: 2rem;
+.protocolos thead th:nth-child(3) {
+  width: 20%;
 }
-
-.page-item.active a {
-  background-color: #8561ff !important;
-  border-color: #8561ff !important;
-  z-index:3;
-}
-
-.page-link:hover {
-  background-color: rgba(133, 97, 255, .3) !important;
-}
-
-.page-link {
-  color: black !important;
-}
-
-.custom-hr {
-  border: 1px solid #8561ff !important;
-  background-color: #8561ff;
-  width: 70%;
-  margin-top: 0;
-}
-
