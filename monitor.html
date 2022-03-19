@@ -86,20 +86,21 @@
   <!--Offcanvas menu-->
   <!--Main Content-->
   <main class="main-container min-vh-100">
-    <header id="monitor-header-title">Monitor</header>
+    <header>Monitor</header>
     <section class="content">
       <!--Tabs Header-->
       <nav>
         <div class="nav nav-tabs nav-justified" id="nav-tab" role="tablist">
-          <button class="nav-link active" id="nav-status-tab" data-bs-toggle="tab" data-bs-target="#nav-status"
-            type="button" role="tab" aria-controls="nav-status" aria-selected="true">
+          <button class="tab-title nav-link active" id="nav-status-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-status" type="button" role="tab" aria-controls="nav-status" aria-selected="true">
             Status Servicos
           </button>
-          <button class="nav-link" id="nav-protocolos-tab" data-bs-toggle="tab" data-bs-target="#nav-protocolos"
-            type="button" role="tab" aria-controls="nav-protocolos" aria-selected="false">
+          <button class="tab-title nav-link" id="nav-protocolos-tab" data-bs-toggle="tab"
+            data-bs-target="#nav-protocolos" type="button" role="tab" aria-controls="nav-protocolos"
+            aria-selected="false">
             Protocolos
           </button>
-          <button class="nav-link" id="nav-consultas-tab" data-bs-toggle="tab" data-bs-target="#nav-consultas"
+          <button class="tab-title nav-link" id="nav-consultas-tab" data-bs-toggle="tab" data-bs-target="#nav-consultas"
             type="button" role="tab" aria-controls="nav-consultas" aria-selected="false">
             Consultas em Análise
           </button>
@@ -111,25 +112,6 @@
         <!--Tab1 Content-->
         <div class="tab-pane fade show active" id="nav-status" role="tabpanel" aria-labelledby="nav-status-tab">
           <form class="filtro">
-            <!--<label class="form-check-label" for="flexCheckChecked"
-                >Offline:</label
-              >
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="offline"
-                id="flexCheckChecked"
-                checked
-              />
-              <label class="form-check-label" for="flexCheckChecked"
-                >Online:</label
-              >
-              <input
-                class="form-check-input"
-                type="checkbox"
-                value="online"
-                id="flexCheckChecked"
-              />-->
             <label for="uf" class="form-label">UF:</label>
             <select id="uf" class="form-select d-inline" aria-label="Default select example">
               <option selected>Todos</option>
@@ -144,14 +126,13 @@
               <option value="TO">TO</option>
             </select>
           </form>
-          <hr class="custom-hr">
-          <div class="row" id="nav-tabContent">
-            <div class="col-sm-6">
+          <div class="row justify-content-between" id="nav-tabContent">
+            <div class="col-sm-6 p-3">
               <div class="card" style="height: 100% !important;">
                 <div class="card-body">
                   <div class="results d-flex justify-content-between">
                     <h5 class="card-title">Offline</h5>
-                    <h5 class="card-title">Resultados: 9</h5>
+                    <h6 class="card-subtitle">Total resultados: 105</h6>
                   </div>
                   <div class="card-text">
                     <ul class="offline">
@@ -186,33 +167,30 @@
                     </ul>
                   </div>
                 </div>
-                <nav aria-label="...">
+                <nav>
                   <ul class="pagination pagination-sm justify-content-end">
-                    <li class="page-item">
-                      <span class="page-link">Anterior</span>
-                    </li>
-                    <li class="page-item active" aria-current="page">
-                      <a class="page-link" href="#">1</a>
+                    <li class="page-item" aria-current="page">
+                      <span class="link-active">1</span>
                     </li>
                     <li class="page-item">
-                      <span class="page-link">2</span>
+                      <a class="link-page" href="#">2</a>
                     </li>
                     <li class="page-item">
-                      <a class="page-link" href="#">3</a>
+                      <a class="link-page" href="#">3</a>
                     </li>
                     <li class="page-item">
-                      <a class="page-link" href="#">Próximo</a>
+                      <a class="link-page" href="#">Próximo</a>
                     </li>
                   </ul>
                 </nav>
               </div>
             </div>
-            <div class="col-sm-6">
+            <div class="col-sm-6 p-3">
               <div class="card" style="height: 100% !important;">
                 <div class="card-body">
-                  <div class="results d-flex justify-content-between">
-                    <h5 class="card-title">Offline</h5>
-                    <h5 class="card-title">Resultados: 9</h5>
+                  <div class="results">
+                    <h5 class="card-title">Online</h5>
+                    <h5 class="card-subtitle">Total resultados: 80</h5>
                   </div>
                   <div class="card-text">
                     <ul class="online">
@@ -246,22 +224,19 @@
                     </ul>
                   </div>
                 </div>
-                <nav aria-label="...">
+                <nav>
                   <ul class="pagination pagination-sm justify-content-end">
-                    <li class="page-item ">
-                      <span class="page-link">Previous</span>
-                    </li>
-                    <li class="page-item active" aria-current="page">
-                      <a class="page-link" href="#">1</a>
+                    <li class="page-item" aria-current="page">
+                      <span class="link-active">1</span>
                     </li>
                     <li class="page-item">
-                      <span class="page-link">2</span>
+                      <a class="link-page" href="#">2</a>
                     </li>
                     <li class="page-item">
-                      <a class="page-link" href="#">3</a>
+                      <a class="link-page" href="#">3</a>
                     </li>
                     <li class="page-item">
-                      <a class="page-link" href="#">Next</a>
+                      <a class="link-page" href="#">Próximo</a>
                     </li>
                   </ul>
                 </nav>
