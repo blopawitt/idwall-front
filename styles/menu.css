@@ -11,6 +11,15 @@
     background-color: #ffff !important;
 }
 
+.logo-navbar {
+    margin-left: 25px;
+}
+
+.sidebar-nav {
+    position: fixed;
+    height: 100%;
+}
+
 .custom-toggler {
     font-size: 1.2rem !important;
 }

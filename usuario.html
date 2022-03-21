@@ -21,24 +21,9 @@
     <body>
         <!--Navbar-->
         <nav class="navbar navbar-light fixed-top">
-        <div class="container-fluid">
-            <!--offcanvas trigger-->
-            <button
-            class="menu-button navbar-toggler"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasWithBothOptions"
-            aria-controls="offcanvasWithBothOptions"
-            >
-            <span
-                class="custom-toggler navbar-toggler-icon"
-                data-bs-target="#offcanvasWithBothOptions"
-            ></span>
-            </button>
-            <!--offcanvas trigger-->
-            <a class="navbar-brand me-auto" href="#"
-            ><img src="img/logo-idwall.png" width="70px" alt="Idwall Logo"
-            /></a>
+            <a class="navbar-brand me-auto logo-navbar" href="#">
+                <img src="./img/logo-idwall.png" width="70px" alt="Idwall Logo"/>
+            </a>
             <button class="menu-item nav-item me-4 sair-navbar" href="#">
                 <svg class="svg-sair" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-left" viewBox="0 0 16 16">
                     <path class="sair-navbar-icon" fill-rule="evenodd" d="M6 12.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v2a.5.5 0 0 1-1 0v-2A1.5 1.5 0 0 1 6.5 2h8A1.5 1.5 0 0 1 16 3.5v9a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 5 12.5v-2a.5.5 0 0 1 1 0v2z"/>
@@ -48,52 +33,41 @@
             </button>
             <!--Navbar-->
             <!--Offcanvas menu-->
-            <div
-            class="offcanvas offcanvas-start sidebar-nav"
-            data-bs-scroll="true"
-            data-bs-backdrop="false"
-            tabindex="-1"
-            id="offcanvasWithBothOptions"
-            aria-labelledby="offcanvasWithBothOptionsLabel"
-            >
-            <div class="sidebar-body offcanvas-body">
+            <div class="sidebar-nav">
+                <div class="sidebar-body offcanvas-body sidebar-nav">
                 <ul class="sidebar-list navbar-nav">
-                <li class="sidebar-item nav-item">
-                    <a class="sidebar-link nav-link" href="#">Protocolos</a>
-                </li>
-                <li class="sidebar-item nav-item">
-                    <a class="sidebar-link nav-link" href="#">Documentos</a>
-                </li>
-                <li class="sidebar-item nav-item">
-                    <a
-                    class="sidebar-link nav-link active"
-                    aria-current="page"
-                    href="index.html"
-                    >Usuários</a
-                    >
-                </li>
-                <li class="sidebar-item nav-item">
-                    <a class="sidebar-link nav-link" href="#">Fontes</a>
-                </li>
-                <li class="sidebar-item nav-item">
-                    <a class="sidebar-link nav-link" href="#">Matrizes</a>
-                </li>
-                <li class="sidebar-item nav-item">
-                    <a class="sidebar-link nav-link" href="#">Regras</a>
-                </li>
-                <li class="sidebar-item nav-item">
-                    <a class="sidebar-link nav-link" href="#">Atributos</a>
-                </li>
-                <li class="sidebar-item nav-item">
-                    <a class="sidebar-link nav-link" href="./monitor.html">Monitor</a>
-                </li>
-                <li class="sidebar-item nav-item">
-                    <a class="sidebar-link nav-link" href="#">Organizações</a>
-                </li>
+                    <li class="sidebar-item nav-item">
+                        <a class="sidebar-link nav-link" href="#">Protocolos</a>
+                    </li>
+                    <li class="sidebar-item nav-item">
+                        <a class="sidebar-link nav-link" href="#">Documentos</a>
+                    </li>
+                    <li class="sidebar-item nav-item">
+                        <a class="sidebar-link nav-link active" href="usuario.html">Usuários</a>
+                    </li>
+                    <li class="sidebar-item nav-item">
+                        <a class="sidebar-link nav-link" href="#">Fontes</a>
+                    </li>
+                    <li class="sidebar-item nav-item">
+                        <a class="sidebar-link nav-link" href="#">Matrizes</a>
+                    </li>
+                    <li class="sidebar-item nav-item">
+                        <a class="sidebar-link nav-link" href="#">Regras</a>
+                    </li>
+                    <li class="sidebar-item nav-item">
+                        <a class="sidebar-link nav-link" href="#">Atributos</a>
+                    </li>
+                    <li class="sidebar-item nav-item">
+                        <a class="sidebar-link nav-link" href="monitor.html">
+                            Monitor
+                        </a>
+                    </li>
+                    <li class="sidebar-item nav-item">
+                        <a class="sidebar-link nav-link" href="#">Organizações</a>
+                    </li>
                 </ul>
+                </div>
             </div>
-            </div>
-        </div>
         </nav>
         <!--Offcanvas menu-->
         <!--Main Content-->
